@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.88);
+}
+.clockContaner{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    transition: all ease-in 0.3s;
+}
+
+.slideUp{
+    transform: translateY(calc(5% - 100%));
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(46, 48, 66);
+    box-shadow: -3px -3px 3px rgba(0,0,0,0.25);
+}
+
+.time::before {
+    content: "";
+    position: absolute;
+    border-radius: 25px;
+    box-shadow: 10px 10px 25px rgba(0,0,0,0.75);
+    width: 250px;
+    height: 250px;
+}
+
+.time h1{
+    position: absolute;
+    font-size: 60px;
+    color: var(--clr);
+}
+
+.time span{
+    position: relative;
+    bottom: 100px;
+    top: 50px;
+    color: var(--clr);
+    font-size: 20px;
+}
+
+/* input box */
+
+input{
+    position: absolute;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    width: 500px;
+    height: 40px;
+    top: calc(100% - 50%);
+    background: transparent;
+    padding-left: 5px;
+    color: white;
+    font-size: 30px;
+    font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    transition: all ease-in 0.3s;
+}
+
+
+.hidden{
+    display: none;
+}
+
+/* dots  */
+
+.dotFrontH,.dotFrontM,.dotFrontS{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    right: 45px;
+    height: calc(100% - 10%);
+    width: 30px;
+}
+.dotFrontH{
+    gap: 5px;
+}
+
+.dotFrontM,.dotFrontS{
+    right: 35px;
+}
+
+.dotBackH, .dotBackM, .dotBackS{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2px;
+    left: 45px;
+    height: calc(100% - 10%);
+    width: 30px;
+}
+
+.dotBackM, .dotBackS{
+    left: 35px;
+}
+
+.dot{
+    width: 100%;
+    height: 5px;
+    background-color: rgb(19, 19, 21);
+}
+
+/* suggest */
+
+#suggestBox{
+    position: absolute;
+    top: calc(100% - 45%);
+    width: 500px;
+    height: 300px; 
+    overflow: scroll;
+    color: rgba(255,255,255, 0.6);
+    font-size: 30px;
+    list-style: none;
+}
+
+#suggestBox::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* autoType  */
+
+#autoType{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    bottom: 80px;
+    border: none;
+    border-right: 2px solid white;
+}
