@@ -250,6 +250,7 @@ document.getElementById("schIn").addEventListener("keypress", function (event) {
       }
     }
   } else if (query.startsWith("y ")) {
+//for YouTube suggestions we need api key because this code is public I used Google's suggestions 
     query = query.substring(2);
     if (query.length > 0) {
       const script = document.createElement("script");
